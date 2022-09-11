@@ -12,9 +12,18 @@ const title = request.body.title;
 const genero = request.body.genero;
 
 
-console.log("body da requisição",
-request.body)
+
 //costruir o obejeto do nosso filme
+
+let newMovie ={
+    "id": Math.random().toString(32).substring(2 ,6),
+        "addedAt": new Date(),
+        "title": title,
+        "genrero": genero
+}
+
+console.log("novo filme",newMovie)
+
 //adicionar ele na lista
 //enviar uma resposta
 };
