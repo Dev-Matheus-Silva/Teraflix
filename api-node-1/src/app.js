@@ -3,14 +3,13 @@
 const express = require("express");
 const app = express();
 
-const CORS = require("cors");
-app.use(CORS());
+const cors = require("cors");
+app.use(cors());
 
 // ROTAS DO NOSSO PROJETO
-
-const movies = require("./routes/moviesRoutes");
+app.use(express.json());
 
 // DEFINIR A ROTA PRINCIPAL
-app.use("/movies",movies)
+app.use("/movies", movies);
 
 module.exports = app;
