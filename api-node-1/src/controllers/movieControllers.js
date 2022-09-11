@@ -11,6 +11,7 @@ const createMovie = (request,response) => {
 const title = request.body.title;
 const genero = request.body.genero;
 
+
 console.log("body da requisição",
 request.body)
 //costruir o obejeto do nosso filme
